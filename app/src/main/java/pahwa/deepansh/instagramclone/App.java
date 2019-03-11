@@ -3,6 +3,7 @@ package pahwa.deepansh.instagramclone;
 import android.app.Application;
 
 import com.parse.Parse;
+import com.parse.ParseInstallation;
 
 public class App extends Application {
     public void onCreate() {
@@ -15,6 +16,6 @@ public class App extends Application {
                 .build()
 
         );
-
+        ParseInstallation.getCurrentInstallation().saveInBackground();
     }
 }

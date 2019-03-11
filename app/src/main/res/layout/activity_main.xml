@@ -60,27 +60,36 @@
         android:id="@+id/submitObject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editKickPower"
-        tools:ignore="MissingConstraints"
         android:onClick="onClick"
-        />
+        android:text="Submit"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="465dp" />
 
     <TextView
         android:id="@+id/getData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="32dp"
         android:text="Get Data from the server"
-        android:textSize="40dp"
-        android:onClick="onClick"
+        android:textSize="20dp"
+        android:textColor="#d1201a"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/submitObject"
         tools:ignore="InvalidId" />
+
+    <Button
+        android:id="@+id/btnGetData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Get Data"
+        android:background="#123abc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/getData" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
