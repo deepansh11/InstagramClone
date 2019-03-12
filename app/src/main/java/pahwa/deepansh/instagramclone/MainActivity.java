@@ -22,7 +22,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button submitObject,getAllData;
+    private Button submitObject,getAllData,btnTransition;
     private EditText editName,editPunchSpeed,editKickSpeed,editKickPower;
     private TextView getData ;
 
@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editKickPower = findViewById(R.id.editKickPower);
 
         getData = findViewById(R.id.getData);
+
+        btnTransition = findViewById(R.id.btnTransition);
 
         getData.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +74,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 ParseQuery<ParseObject> queryAll = ParseQuery.getQuery("KickBoxer");
 
+                queryAll.whereGreaterThanOrEqualTo("Punch_Speed",2000);
+
                 queryAll.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {
@@ -91,6 +95,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 });
 
+
+            }
+        });
+
+
+
+        btnTransition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
             }
         });
