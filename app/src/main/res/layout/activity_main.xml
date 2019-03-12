@@ -97,11 +97,15 @@
         android:id="@+id/btnTransition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:layout_marginBottom="8dp"
         android:text="Transition to next activity"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnGetData"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="@+id/btnGetData"
-        tools:layout_editor_absoluteY="492dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btnGetData"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
