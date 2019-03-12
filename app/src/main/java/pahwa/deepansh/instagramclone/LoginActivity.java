@@ -1,5 +1,6 @@
 package pahwa.deepansh.instagramclone;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +47,9 @@ public class LoginActivity extends AppCompatActivity {
                     public void done(ParseException e) {
                         if (e == null) {
                             FancyToast.makeText(LoginActivity.this, parseUser.get("username") + " SignUp Successful", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true).show();
+                            Intent intent = new Intent(LoginActivity.this,WelcomeActivity.class);
+                            startActivity(intent);
+
                         } else {
                             FancyToast.makeText(LoginActivity.this, "Error", FancyToast.LENGTH_SHORT, FancyToast.ERROR, true).show();
                         }
@@ -64,8 +68,9 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void done(ParseUser user, ParseException e) {
                                 if (user!= null && e == null){
-
                                     FancyToast.makeText(LoginActivity.this, user.get("username") + " Logged In Successful", FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true).show();
+                                    Intent intent = new Intent(LoginActivity.this,WelcomeActivity.class);
+                                    startActivity(intent);
                                 } else  {
                                     FancyToast.makeText(LoginActivity.this, e.getMessage(), FancyToast.LENGTH_SHORT, FancyToast.ERROR, true).show();
                                 }
