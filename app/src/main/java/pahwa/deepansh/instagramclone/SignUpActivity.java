@@ -66,7 +66,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
         if (ParseUser.getCurrentUser() != null){
 
-            ParseUser.getCurrentUser().logOut();
+            transitionToHomePage();
 
         }
 
@@ -107,6 +107,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                                 FancyToast.makeText(SignUpActivity.this,
                                         appUser.getUsername() + " Signed Up successful",
                                         FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true).show();
+                                transitionToHomePage();
                             } else {
                                 FancyToast.makeText(SignUpActivity.this, "Error in signing up",
                                         FancyToast.LENGTH_SHORT, FancyToast.ERROR, true).show();
@@ -139,4 +140,12 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             e.printStackTrace();
         }
     }
+
+    private void transitionToHomePage(){
+
+        Intent intent = new Intent(SignUpActivity.this,HomePageActivity.class);
+        startActivity(intent);
+    }
+
+
 }

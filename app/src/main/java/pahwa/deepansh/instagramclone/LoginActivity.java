@@ -90,6 +90,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                         FancyToast.makeText(LoginActivity.this,
                                                 user.getUsername() + " Logged in",
                                                 FancyToast.LENGTH_SHORT, FancyToast.SUCCESS, true).show();
+                                                transitionToHomePage();
+
                                     } else {
                                         FancyToast.makeText(LoginActivity.this,
                                                 e.getMessage(),
@@ -112,5 +114,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         } catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    private void transitionToHomePage(){
+
+        Intent intent = new Intent(LoginActivity.this,HomePageActivity.class);
+        startActivity(intent);
     }
 }

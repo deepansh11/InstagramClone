@@ -14,7 +14,7 @@
         android:layout_height="141dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/insta_pic"
+        app:srcCompat="@drawable/insta_pic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
